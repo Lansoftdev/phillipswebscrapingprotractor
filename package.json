@@ -1,0 +1,32 @@
+{
+  "name": "phillipsProj",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "repository": "https://github.com",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "chromedriver": "^2.29",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    "protractor": "^5.1.1"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor specs/protractor.conf.js"
+  }
+}
